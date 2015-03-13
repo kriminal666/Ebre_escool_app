@@ -17,6 +17,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
+import com.pushbots.push.Pushbots;
 
 import org.acacha.ebre_escool.ebre_escool_app.accounts.EbreEscoolAccount;
 import org.acacha.ebre_escool.ebre_escool_app.apis.EbreEscoolAPI;
@@ -148,6 +149,9 @@ public class SplashScreen extends Activity {
             on_create_after_checking_connection();
         }
         //END CHECK CONNECTION
+
+        //Pushbots init
+        Pushbots.sharedInstance().init(this);
     }
 
     private void on_create_after_checking_connection() {
